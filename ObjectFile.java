@@ -1,0 +1,5 @@
+/*
+Make a class that creates objects. 
+Objects have to be read from file.
+Objects have to be written to file.
+*/
