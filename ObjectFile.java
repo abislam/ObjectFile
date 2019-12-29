@@ -4,6 +4,8 @@ Objects have to be read from file.
 Objects have to be written to file.
 */
 
+import java.io.Serializable;
+
 public class ObjectFile {
 	public static void main(String[] args){
 
@@ -23,6 +25,9 @@ public class ObjectFile {
 		System.out.println(sedan[1].getID() + "\t" + sedan[1].getCompany() + "\t" + sedan[1].getModel() + "\t" + sedan[1].getYear());
 		System.out.println(sedan[2].getID() + "\t" + sedan[2].getCompany() + "\t" + sedan[2].getModel() + "\t" + sedan[2].getYear());
 		System.out.println(sedan[3].getID() + "\t" + sedan[3].getCompany() + "\t" + sedan[3].getModel() + "\t" + sedan[3].getYear());
+
+		//write object to file
+		//https://examples.javacodegeeks.com/core-java/io/fileoutputstream/how-to-write-an-object-to-file-in-java/
 
 	}
 }
