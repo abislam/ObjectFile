@@ -7,17 +7,23 @@ Objects have to be written to file.
 public class ObjectFile {
 	public static void main(String[] args){
 
+		//object array
+		Car sedan[] = new Car[100];
+
 		System.out.println("Welcome to my Object Creater in java");
 		System.out.println("This program will read and write objects to and from a file");
 
-		Car sedan = new Car(0, "Mercedes", "S Class", 2020);
-		Car suv = new Car(1, "Dodge", "Durango", 2020);
-		Car coup = new Car(2, "Lamborghini", "Gallardo", 2020);
+		sedan[0] = new Car(0, "Mercedez", "S Class", 2020);
+		sedan[1] = new Car(1, "Mercedez", "S Class", 2019);
+		sedan[2] = new Car(2, "Mercedez", "S Class", 2018);
+		sedan[3] = new Car(3, "Mercedez", "S Class", 2017);
 
 
-		System.out.println(sedan.getID() + "\t" + sedan.getCompany() + "\t" + sedan.getModel() + "\t" + sedan.getYear());
-		System.out.println(suv.getID() + "\t" + suv.getCompany() + "\t" + suv.getModel() + "\t" + suv.getYear());
-		System.out.println(coup.getID() + "\t" + coup.getCompany() + "\t" + coup.getModel() + "\t" + coup.getYear());
+		System.out.println(sedan[0].getID() + "\t" + sedan[0].getCompany() + "\t" + sedan[0].getModel() + "\t" + sedan[0].getYear());
+		System.out.println(sedan[1].getID() + "\t" + sedan[1].getCompany() + "\t" + sedan[1].getModel() + "\t" + sedan[1].getYear());
+		System.out.println(sedan[2].getID() + "\t" + sedan[2].getCompany() + "\t" + sedan[2].getModel() + "\t" + sedan[2].getYear());
+		System.out.println(sedan[3].getID() + "\t" + sedan[3].getCompany() + "\t" + sedan[3].getModel() + "\t" + sedan[3].getYear());
+
 	}
 }
 
