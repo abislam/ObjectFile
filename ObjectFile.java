@@ -5,8 +5,10 @@ Objects have to be written to file.
 */
 
 import java.io.Serializable;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
-public class ObjectFile {
+public class ObjectFile{
 	public static void main(String[] args){
 
 		//object array
@@ -29,10 +31,31 @@ public class ObjectFile {
 		//write object to file
 		//https://examples.javacodegeeks.com/core-java/io/fileoutputstream/how-to-write-an-object-to-file-in-java/
 
+		sedan[4] = new Car(4, "Mercedez", "S CLASS", 2016);
+		sedan[4].WriteObjectToFile(sedan[4]);
+
 	}
+
+	public void WriteObjectToFile(Object serObj) {
+ 
+        try {
+ 
+            FileOutputStream fileOut = new FileOutputStream("object.txt");
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            objectOut.writeObject(serObj);
+            objectOut.close();
+            System.out.println("The Object  was succesfully written to a file");
+ 
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }
 
-class Car{
+class Car implements Serializable{
+
+	//default serialVersion id
+    private static final long serialVersionUID = 1L;
 
 	private int id;
 	private String company;
